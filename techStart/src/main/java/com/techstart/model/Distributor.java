@@ -17,10 +17,16 @@ public class Distributor {
     private String name;
     private String address;
     private String contact;
+    private String groupName;
 
     public Distributor(String name, String address, String contact) {
         this.name = name;
         this.address = address;
         this.contact = contact;
+    }
+
+    @Override
+    public String toString() {
+        return "name: " + name + " - address: " +address;
     }
 }

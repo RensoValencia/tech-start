@@ -2,6 +2,7 @@ package com.techstart.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 /*
  * Author: Renso Valencia Ventura
@@ -17,8 +18,8 @@ public class Invoice {
     private String invoiceNumber;
     private String purchaseDate;
     private Double totalPurchase;
-    private String customerId;
-    private String distributorId;
+    @Transient private String customerId;
+    @Transient private String distributorId;
 
     public Invoice(String invoiceNumber, String purchaseDate, Double totalPurchase) {
         this.invoiceNumber = invoiceNumber;
@@ -62,15 +63,15 @@ public class Invoice {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
-    }
+    //public void setCustomerId(String customerId) {
+       // this.customerId = customerId;
+    //}
 
     public String getDistributorId() {
         return distributorId;
     }
 
-    public void setDistributorId(String distributorId) {
-        this.distributorId = distributorId;
-    }
+    //public void setDistributorId(String distributorId) {
+        //this.distributorId = distributorId;
+    //}
 }

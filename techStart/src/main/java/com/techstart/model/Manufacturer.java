@@ -23,4 +23,9 @@ public class Manufacturer {
         this.address = address;
         this.contact = contact;
     }
+
+    @Override
+    public String toString() {
+        return "name: " + name + " - address: " + address;
+    }
 }

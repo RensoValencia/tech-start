@@ -24,4 +24,8 @@ public class DistributorService {
     public List<Distributor> findAll()  {
         return distributorRepository.findAll();
     }
+
+    public Distributor findById(String id)  {
+        return distributorRepository.findById(id).get();
+    }
 }

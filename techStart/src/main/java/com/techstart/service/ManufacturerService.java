@@ -28,4 +28,8 @@ public class ManufacturerService {
     public List<Manufacturer> findAll()  {
         return manufacturerRepository.findAll();
     }
+
+    public Manufacturer findById(String id)  {
+        return manufacturerRepository.findById(id).get();
+    }
 }

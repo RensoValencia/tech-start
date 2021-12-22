@@ -17,6 +17,7 @@ public class Customer {
     private String name;
     private String address;
     private String contact;
+    private String groupName;
 
     public Customer(String name, String address, String contact) {
         this.name = name;
